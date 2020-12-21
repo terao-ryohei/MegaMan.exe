@@ -1,10 +1,11 @@
 module.exports = {
   extends: [
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'airbnb',
+    'erb',
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
-    'erb',
     'prettier/react',
   ],
   plugins: ['react', '@typescript-eslint', 'prettier'],
@@ -43,18 +44,6 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   rules: {
-    'prettier/prettier': [
-      'error',
-      {
-        printWidth: 140,
-        trailingComma: 'all',
-        tabWidth: 2,
-        semi: true,
-        singleQuote: true,
-        arrowParens: 'avoid',
-        bracketSpacing: true,
-      },
-    ],
     '@typescript-eslint/indent': 'off',
     'spaced-comment': ['error', 'always', { markers: ['/ <reference'] }],
     'react/jsx-filename-extension': 'off',
@@ -75,13 +64,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: ['**/**.test.tsx', 'setupEnzyme.ts'],
-        peerDependencies: false,
-      },
-    ],
+    'import/no-extraneous-dependencies': 'off',
     'jsx-a11y/label-has-associated-control': [
       'error',
       {

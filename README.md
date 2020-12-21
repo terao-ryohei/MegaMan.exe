@@ -1,3 +1,9 @@
+## Project MegaMan.exe
+
+<p>プログレスPET再現プロジェクト</p>
+
+## 以下フォーク先 readme
+
 <img src=".erb/img/erb-banner.png" width="100%" />
 
 <br>

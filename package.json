@@ -248,11 +248,16 @@
     "yarn-deduplicate": "^3.1.0"
   },
   "dependencies": {
+    "@emotion/babel-preset-css-prop": "^11.0.0",
+    "@emotion/react": "^11.1.4",
     "electron-debug": "^3.2.0",
     "electron-log": "^4.3.1",
     "electron-updater": "^4.3.4",
+    "emotion": "^11.0.0",
+    "es6-promise": "^4.2.8",
     "history": "^5.0.0",
     "react": "^17.0.1",
+    "react-app-polyfill": "^2.0.0",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "regenerator-runtime": "^0.13.5",
@@ -294,5 +299,6 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  }
+  },
+  "version": "0.0.0"
 }

@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import './ress';
+
+/* colors */
+$lightYellow: '#FDE77D';
+$yellow: #ffde48;
+$ornage: #fcc800;
+$green: #00b894;
+$lightGreen: '#DFEDCA';
+$red: #f22222;
+$base: #f2f2f2;
+$black: #36352f;
+$border: #ededed;
+$white: #fff;
+$background: #fffcf2;
+
+/** chromeの黒枠線対策 */
+* {
+  outline: none !important;
+}
+
+/* my reset css style */
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+a {
+  text-decoration: none;
+
+  color: $black;
+}
+picture {
+  display: block;
+}
+li {
+  list-style: none;
+}
+
+/* default seeting */
+// #root {}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: $background;
+  color: $black;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'メイリオ',
+    'Meiryo', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 1;
+  margin: 0;
+  font-size: 14px;
+  @media screen and (max-width: 640px) {
+    background-color: #f2f2f2;
+  }
+}
+button,
+input,
+// optgroup,
+select,
+option,
+textarea {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'メイリオ',
+    'Meiryo', sans-serif;
+}
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt,
+dd {
+  line-height: 1.5;
+}
+
+br {
+  &.sp-show {
+    display: none;
+    @media screen and (max-width: 640px) {
+      display: initial;
+    }
+  }
+  &.sp-hide {
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+  }
+}
+
+input,
+li,
+span,
+a {
+  &:focus {
+    outline: rgba(85, 158, 55, 0.6) auto 4px;
+  }
+}
+
+/* input setting */
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='tel'],
+input[type='search'],
+input[type='month'],
+input[type='week'],
+input[type='time'],
+input[type='password'] {
+  background-color: #eff6e4;
+  border-bottom: 2px solid #eff6e4;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 3.5px 0.25em 1.5px;
+  width: 100%;
+  &::placeholder {
+    color: #acacac;
+    font-size: 16px;
+    line-height: normal;
+  }
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid #92c17c;
+  }
+}
+/* スピンボタン削除 */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+select:focus {
+  outline: rgba(85, 158, 55, 0.6) auto 4px;
+}
+input[type='radio'],
+input[type='checkbox'] {
+  display: none;
+}
+input[readonly] {
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    color: $black;
+  }
+}
+/* 鍵アイコン削除 */
+input::-webkit-credentials-auto-fill-button {
+  background-color: transparent;
+  width: 0;
+  margin: 0;
+}
+
+/* IEのパスワード系の表示を削除 */
+input::-ms-clear {
+  // クリアボタン非表示
+  display: none;
+}
+input::-ms-reveal {
+  // パスワード確認ボタン非表示
+  display: none;
+}
+
+/* スピンボタン削除 */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button,
+input[type='month']::-webkit-outer-spin-button,
+input[type='month']::-webkit-inner-spin-button,
+input[type='datetime-local']::-webkit-outer-spin-button,
+input[type='datetime-local']::-webkit-inner-spin-button,
+input[type='week']::-webkit-outer-spin-button,
+input[type='week']::-webkit-inner-spin-button,
+input[type='time']::-webkit-outer-spin-button,
+input[type='time']::-webkit-inner-spin-button,
+input[type='date']::-webkit-outer-spin-button,
+input[type='date']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* ボタン */
+.Button + .Button,
+.Button + .ButtonWithIcon,
+.ButtonWithIcon + .Button,
+.ButtonWithIcon + .ButtonWithIcon {
+  @media screen and (max-width: 640px) {
+    margin-top: 16px;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+.schedule {
+  overflow: visible !important;
+}
+// Firefox
+_:lang(x)::-moz-placeholder,
+.GraphBarsMonth {
+  overflow-x: visible !important;
+}
+_:lang(x)::-moz-placeholder,
+.graph_wrap {
+  overflow-x: scroll;
+}
